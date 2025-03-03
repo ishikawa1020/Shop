@@ -547,7 +547,7 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                         detailinfo.map((item, key) => {
                           const displayValue =
                             typeof item === "object" && item !== null
-                              ? Object.values(item).join(", ")
+                              ? Object.values(item).join(",")
                               : item;
 
                           return displayValue && displayValue !== "undefined" ? (
@@ -556,15 +556,15 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                               className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200"
                             >
                               {/* 30% width */}
-                              <td className="px-6 py-4 w-3/10">{productdetil?.[key] ?? "N/A"}</td>
+                              <td className="px-6 py-4 w-[130px]">{productdetil?.[key] ?? "N/A"}</td>
 
                               {/* 70% width */}
-                              <th
+                              <td
                                 scope="row"
-                                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white w-7/10"
+                                className="w-[100px] px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-wrap"
                               >
                                 {displayValue}
-                              </th>
+                              </td>
                             </tr>
                           ) : null;
                         })}
