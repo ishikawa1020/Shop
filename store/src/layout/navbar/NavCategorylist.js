@@ -110,8 +110,8 @@ const NavCategorylist = () => {
                     価格帯で探す
                 </h1>
                 <div class="w-full mt-2">
-                    {searchprice.map((index) => (
-                        <h1 className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
+                    {searchprice.map((index, key) => (
+                        <h1 key={key} className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
                             {index}
                             <span className="text-gray-400">
                                 <IoChevronForwardOutline />
