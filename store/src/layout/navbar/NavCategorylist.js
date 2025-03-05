@@ -15,7 +15,7 @@ import { FaCrown } from "react-icons/fa";
 
 
 const NavCategorylist = () => {
-    
+
     const Searchbyfeature = ["すべて見る",
         "月別おすすめのノベルティ特集",
         "業界別ノベルティ特集レジ袋有料化に。今必要なエコバッグとは",
@@ -125,8 +125,8 @@ const NavCategorylist = () => {
                     <TbBrandAppgallery />
                     ブランドで探す
                 </h1>
-                {brand.map((index) => (
-                    <h1 className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
+                {brand.map((index, key) => (
+                    <h1 key={key} className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
                         {index}
 
                         <span className="text-gray-400">
@@ -140,8 +140,8 @@ const NavCategorylist = () => {
                     <FiSearch />
                     目的で探す
                 </h1>
-                {Searchbypurpose.map((index) => (
-                    <h1 className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
+                {Searchbypurpose.map((index, key) => (
+                    <h1 key={key} className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
                         {index}
                         <span className="text-gray-400">
                             <IoChevronForwardOutline />
@@ -155,8 +155,8 @@ const NavCategorylist = () => {
                     人気商品から探す
                 </h1>
                 <div class="w-full mt-2">
-                    {Searchbypopularproducts.map((index) => (
-                        <h1 className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
+                    {Searchbypopularproducts.map((index, key) => (
+                        <h1 key={key} className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
                             {index}
                             <span className="text-gray-400">
                                 <IoChevronForwardOutline />
@@ -171,8 +171,8 @@ const NavCategorylist = () => {
                     特集から探す
                 </h1>
                 <div class="w-full mt-2">
-                    {Searchbyfeature.map((index) => (
-                        <h1 className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
+                    {Searchbyfeature.map((index, key) => (
+                        <h1 key={key} className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
                             {index}
                             <span className="text-gray-400">
                                 <IoChevronForwardOutline />
@@ -187,8 +187,8 @@ const NavCategorylist = () => {
                     お役立ちコラム
                 </h1>
                 <div class="w-full mt-2">
-                    {UsefulColumn.map((index) => (
-                        <h1 className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
+                    {UsefulColumn.map((index, key) => (
+                        <h1 key={key} className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
                             {index}
                             <span className="text-gray-400">
                                 <IoChevronForwardOutline />

@@ -7,7 +7,7 @@ const settingSlice = createSlice({
   },
   reducers: {
     addSetting: (state, action) => {
-      console.log(action.payload, 'payload')
+      // console.log(action.payload, 'payload')
       const existsItem = state.settingItem.find(
         (x) => x.name === action.payload.name
       );

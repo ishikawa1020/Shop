@@ -43,7 +43,7 @@ const useGetSetting = () => {
         setLoading(true);
         // console.log("storeCustomizationSetting setting not available");
         const res = await SettingServices.getStoreCustomizationSetting();
-        console.log(res, 'rereres');
+        // console.log(res, 'rereres');
         // console.log("res", res);
         const storeCustomizationSettingData = {
           ...res,
@@ -85,7 +85,7 @@ const useGetSetting = () => {
         // setLoading(false);
       } catch (err) {
         setError(err.message);
-        console.log("Error on getting globalSetting setting", err);
+        // console.log("Error on getting globalSetting setting", err);
       }
     };
 
