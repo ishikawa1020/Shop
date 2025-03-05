@@ -486,7 +486,7 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                                   url={``}
                                   quote=""
                                 >
-                                  <FaLine size={32} round />
+                                  <FaLine size={32} round={true} />
                                 </WhatsappShareButton>
                               </li>
                               <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg-emerald-500  mr-2 transition ease-in-out duration-500">
@@ -494,7 +494,7 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                                   url={`https://kachabazar-store-nine.vercel.app/product/${router.query.slug}`}
                                   quote=""
                                 >
-                                  <FacebookIcon size={32} round />
+                                  <FacebookIcon size={32} round={true} />
                                 </FacebookShareButton>
                               </li>
                               <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg-emerald-500  mr-2 transition ease-in-out duration-500">
@@ -502,7 +502,7 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                                   url={`https://kachabazar-store-nine.vercel.app/product/${router.query.slug}`}
                                   quote=""
                                 >
-                                  <TwitterIcon size={32} round />
+                                  <TwitterIcon size={32} round={true} />
                                 </TwitterShareButton>
                               </li>
                               {/* <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg-emerald-500  mr-2 transition ease-in-out duration-500">
@@ -510,7 +510,7 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                                   url={`https://kachabazar-store-nine.vercel.app/product/${router.query.slug}`}
                                   quote=""
                                 >
-                                  <RedditIcon size={32} round />
+                                  <RedditIcon size={32} round = {true} />
                                 </RedditShareButton>
                               </li> */}
 
@@ -519,7 +519,7 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                                   url={`https://kachabazar-store-nine.vercel.app/product/${router.query.slug}`}
                                   quote=""
                                 >
-                                  <LinkedinIcon size={32} round />
+                                  <LinkedinIcon size={32} round={true} />
                                 </LinkedinShareButton>
                               </li>
                             </ul>

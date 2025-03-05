@@ -63,7 +63,7 @@ const StaffTable = ({ staffs, lang }) => {
                 {showDateFormat(staff.joiningData)}
               </span>
             </TableCell>
-            <TableCell class="text-center">
+            <TableCell className="text-center">
               <span className="text-sm font-semibold">{staff?.role}</span>
             </TableCell>
             <TableCell className="text-center text-xs">
