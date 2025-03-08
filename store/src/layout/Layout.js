@@ -12,14 +12,15 @@ import FooterTop from "@layout/footer/FooterTop";
 import MobileFooter from "@layout/footer/MobileFooter";
 import FeatureCard from "@components/feature-card/FeatureCard";
 import PerfectScrollbar from 'react-perfect-scrollbar';
-
+import Customizer from 'src/components/customize'
 
 const Layout = ({ title, description, children }) => {
-
+  // const { navigationSize, disableCustomizer, collapsedNavigationSize } = themeConfig
   return (
     <PerfectScrollbar>
       <div>
         <ToastContainer />
+
         <div className="font-sans">
           <Head>
             <title>
@@ -30,6 +31,7 @@ const Layout = ({ title, description, children }) => {
             {description && <meta name="description" content={description} />}
             <link ref="icon" href="/favicon.png" />
           </Head>
+          {/* {disableCustomizer || hidden ? null : <Customizer />} */}
           <NavBarTop />
           <Navbar />
           <div class="grid grid-cols-10">
