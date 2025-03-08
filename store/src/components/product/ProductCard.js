@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { IoAdd, IoBagAddSharp, IoRemove } from "react-icons/io5";
 import { useCart } from "react-use-cart";
+import { useRouter } from "next/router";
 
 //internal import
 
@@ -18,6 +19,7 @@ import ImageWithFallback from "@components/common/ImageWithFallBack";
 import { handleLogEvent } from "src/lib/analytics";
 
 const ProductCard = ({ product, attributes }) => {
+  const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
   // console.log(product) 
 
@@ -49,6 +51,13 @@ const ProductCard = ({ product, attributes }) => {
     };
     addItem(newItem);
   };
+  const handleMoreInfo = (slug) => {
+    setModalOpen(false);
+
+    router.push(`/product/${slug}`);
+    setIsLoading(!isLoading);
+    handleLogEvent("product", `opened ${slug} product details`);
+  };
 
   const handleModalOpen = (event, id) => {
     setModalOpen(event);
@@ -73,11 +82,13 @@ const ProductCard = ({ product, attributes }) => {
         </div>
         <div
           onClick={() => {
-            handleModalOpen(!modalOpen, product._id);
+            /* handleModalOpen(!modalOpen, product._id);
             handleLogEvent(
               "product",
               `opened ${showingTranslateValue(product?.title)} product modal`
-            );
+            ); */
+            console.log(product.slug)
+            handleMoreInfo(product.slug)
           }}
           className="relative flex justify-center cursor-pointer pt-2 w-full h-44"
         >
