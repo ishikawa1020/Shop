@@ -41,7 +41,7 @@ const Layout = ({ title, description, children }) => {
                 </div>
                 <div class="col-span-8 p-4 w-full">
                   <Navcategorylist />
-                </div>
+                </div>  
               </div>
             </div>
             <div class="lg:col-span-8 col-span-10 p-4">
