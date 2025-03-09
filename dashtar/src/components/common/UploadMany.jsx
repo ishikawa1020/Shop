@@ -272,7 +272,7 @@ const UploadMany = ({
                 ) : (
                   <>
                     <FiUploadCloud className="mx-2 text-emerald-500 text-lg dark:text-gray-400" />{" "}
-                    {t("SelectYourJSON")} {title} {t("File")}
+                    {t("SelectYourJSON")} {t(title)} {t("File")}
                   </>
                 )}
                 {filename && (
@@ -296,7 +296,9 @@ const UploadMany = ({
                     width={20}
                     height={10}
                   />{" "}
-                  <span className="font-serif ml-2 font-light">Processing</span>
+                  <span className="font-serif ml-2 font-light">
+                    {t("Processing")}
+                  </span>
                 </Button>
               ) : (
                 <Button

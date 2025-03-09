@@ -4,7 +4,7 @@ import { Line } from "react-chartjs-2";
 import { useTranslation } from "react-i18next";
 
 const LineChart = ({ salesReport }) => {
-  console.log("saleReport", salesReport);
+  // console.log("saleReport", salesReport);
   // Create a Set to store unique dates
   const uniqueDates = new Set();
 

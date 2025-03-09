@@ -35,8 +35,8 @@ app.set("trust proxy", 1);
 
 app.use(express.json({ limit: "400mb" }));
 app.use(helmet());
-app.options("*", cors()); // include before other routes
-app.use(cors("*"));
+// app.options("*", cors()); // include before other routes
+app.use(cors({origin: "*"}));
 
 //root route
 app.get("/", (req, res) => {
