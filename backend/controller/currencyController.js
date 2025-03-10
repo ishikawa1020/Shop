@@ -18,7 +18,6 @@ const addCurrency = async (req, res) => {
 
 const addAllCurrency = async (req, res) => {
   try {
-    
       await Currencie.insertMany(req.body);
       res.send({ message: 'すべての通貨が正常に追加されました！' });
     }  catch (err) {
