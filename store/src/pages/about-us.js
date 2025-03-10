@@ -16,7 +16,7 @@ const AboutUs = () => {
 
   return (
     <Layout title="About Us" description="This is about us page">
-      <PageHeader
+      {/* <PageHeader
         headerBg={storeCustomizationSetting?.about_us?.header_bg}
         title={showingTranslateValue(
           storeCustomizationSetting?.about_us?.title
@@ -102,7 +102,7 @@ const AboutUs = () => {
             <li>大阪府大阪市北区梅田3-4-5 毎日新聞ビル 3F</li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
     </Layout>
   );

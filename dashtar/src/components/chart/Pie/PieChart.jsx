@@ -21,7 +21,6 @@ const PieChart = ({ data }) => {
       display: false,
     },
   };
-  console.log(PieOption);
 
   return (
     <div>

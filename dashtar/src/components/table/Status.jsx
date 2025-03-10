@@ -1,7 +1,6 @@
 import { Badge } from "@windmill/react-ui";
 
 const Status = ({ status }) => {
-  console.log(status);
   const statues = {
     Active: "アクティブ",
     Inactive: "非アクティブ",
