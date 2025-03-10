@@ -111,6 +111,7 @@ const addStaffEmailBody = (option) => {
                                             style='border:0;display:block;outline:none;text-decoration:none;height:auto;width:80px;font-size:13px;padding-bottom:30px;'
                                             width='80'
                                             height='80'
+                                            alt="img"
                                           />
                                         </td>
                                       </tr>

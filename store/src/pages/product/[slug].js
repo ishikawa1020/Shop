@@ -536,8 +536,8 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                     </div>
                   </div>
                 </div>
-                <div class="relative overflow-x-auto shadow-md sm:rounded-lg pt-4">
-                  <h1 class="font-bold p-3 font-xs flex items-center gap-1"><GrDocumentText />商品仕様</h1>
+                <div className="relative overflow-x-auto shadow-md sm:rounded-lg pt-4">
+                  <h1 className="font-bold p-3 font-xs flex items-center gap-1"><GrDocumentText />商品仕様</h1>
                   <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
 

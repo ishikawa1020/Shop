@@ -88,9 +88,9 @@ const NavCategorylist = () => {
         CategoryServices.getShowingCategory()
     );
     return (
-        <div class="flex flex-col gap-5">
+        <div className="flex flex-col gap-5">
             <div>
-                <h1 class="font-bold flex gap-2 items-center">
+                <h1 className="font-bold flex gap-2 items-center">
                     <FiSearch />
                     商品一覧
                 </h1>
@@ -105,11 +105,11 @@ const NavCategorylist = () => {
                 ))}
             </div>
             <div>
-                <h1 class="font-bold flex gap-2 items-center">
+                <h1 className="font-bold flex gap-2 items-center">
                     <FaYenSign />
                     価格帯で探す
                 </h1>
-                <div class="w-full mt-2">
+                <div className="w-full mt-2">
                     {searchprice.map((index, key) => (
                         <h1 key={key} className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
                             {index}
@@ -121,7 +121,7 @@ const NavCategorylist = () => {
                 </div>
             </div>
             <div>
-                <h1 class="font-bold flex gap-2 items-center">
+                <h1 className="font-bold flex gap-2 items-center">
                     <TbBrandAppgallery />
                     ブランドで探す
                 </h1>
@@ -136,7 +136,7 @@ const NavCategorylist = () => {
                 ))}
             </div>
             <div>
-                <h1 class="font-bold flex gap-2 items-center">
+                <h1 className="font-bold flex gap-2 items-center">
                     <FiSearch />
                     目的で探す
                 </h1>
@@ -150,11 +150,11 @@ const NavCategorylist = () => {
                 ))}
             </div>
             <div>
-                <h1 class="font-bold flex gap-2 items-center">
+                <h1 className="font-bold flex gap-2 items-center">
                     <FaCrown />
                     人気商品から探す
                 </h1>
-                <div class="w-full mt-2">
+                <div className="w-full mt-2">
                     {Searchbypopularproducts.map((index, key) => (
                         <h1 key={key} className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
                             {index}
@@ -166,11 +166,11 @@ const NavCategorylist = () => {
                 </div>
             </div>
             <div>
-                <h1 class="font-bold flex gap-2 items-center">
+                <h1 className="font-bold flex gap-2 items-center">
                     <FaStar />
                     特集から探す
                 </h1>
-                <div class="w-full mt-2">
+                <div className="w-full mt-2">
                     {Searchbyfeature.map((index, key) => (
                         <h1 key={key} className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
                             {index}
@@ -182,11 +182,11 @@ const NavCategorylist = () => {
                 </div>
             </div>
             <div>
-                <h1 class="font-bold flex gap-2 items-center">
+                <h1 className="font-bold flex gap-2 items-center">
                     <GiMagicLamp />
                     お役立ちコラム
                 </h1>
-                <div class="w-full mt-2">
+                <div className="w-full mt-2">
                     {UsefulColumn.map((index, key) => (
                         <h1 key={key} className="ml-4 text-sm font-medium w-full p-2 hover:text-emerald-600 py-1 cursor-pointer flex gap-2 items-center">
                             {index}

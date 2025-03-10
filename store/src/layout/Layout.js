@@ -34,17 +34,17 @@ const Layout = ({ title, description, children }) => {
           {/* {disableCustomizer || hidden ? null : <Customizer />} */}
           <NavBarTop />
           <Navbar />
-          <div class="grid grid-cols-10">
-            <div class="hidden lg:block col-span-2 p-4">
-              <div class="grid grid-cols-10 gap-4">
-                <div class="col-span-2 p-4">
+          <div className="grid grid-cols-10">
+            <div className="hidden lg:block col-span-2 p-4">
+              <div className="grid grid-cols-10 gap-4">
+                <div className="col-span-2 p-4">
                 </div>
-                <div class="col-span-8 p-4 w-full">
+                <div className="col-span-8 p-4 w-full">
                   <Navcategorylist />
                 </div>  
               </div>
             </div>
-            <div class="lg:col-span-8 col-span-10 p-4">
+            <div className="lg:col-span-8 col-span-10 p-4">
               <div className="bg-gray-50">{children}</div>
             </div>
           </div>
