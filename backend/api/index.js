@@ -35,32 +35,32 @@ app.set("trust proxy", 1);
 
 app.use(express.json({ limit: "400mb" }));
 app.use(helmet());
-// app.options("*", cors()); // include before other routes
+app.use(cors()); // Allows all origins
 // app.use(cors({origin: "*"}));
 
-const allowedOrigins = [
-  'https://www.musashino-novelty.com',
-  'https://admin.musashino-novelty.com'
-];
+// const allowedOrigins = [
+//   'https://www.musashino-novelty.com',
+//   'https://admin.musashino-novelty.com'
+// ];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true // Allow cookies and authentication headers
-}));
+// app.use(cors({
+//   origin: function (origin, callback) {
+//     if (!origin || allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   credentials: true // Allow cookies and authentication headers
+// }));
 
-// Handle preflight OPTIONS request
-app.options('*', (req, res) => {
-  res.header("Access-Control-Allow-Origin", req.headers.origin);
-  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  res.sendStatus(200);
-});
+// // Handle preflight OPTIONS request
+// app.options('*', (req, res) => {
+//   res.header("Access-Control-Allow-Origin", req.headers.origin);
+//   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+//   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+//   res.sendStatus(200);
+// });
 
 //root route
 app.get("/", (req, res) => {

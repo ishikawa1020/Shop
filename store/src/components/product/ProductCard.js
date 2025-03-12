@@ -52,10 +52,9 @@ const ProductCard = ({ product, attributes }) => {
     addItem(newItem);
   };
   const handleMoreInfo = (slug) => {
-    setModalOpen(false);
-
+    // setModalOpen(false);
     router.push(`/product/${slug}`);
-    setIsLoading(!isLoading);
+    setIsLoading(false);
     handleLogEvent("product", `opened ${slug} product details`);
   };
 
@@ -87,7 +86,6 @@ const ProductCard = ({ product, attributes }) => {
               "product",
               `opened ${showingTranslateValue(product?.title)} product modal`
             ); */
-            console.log(product.slug)
             handleMoreInfo(product.slug)
           }}
           className="relative flex justify-center cursor-pointer pt-2 w-full h-44"
