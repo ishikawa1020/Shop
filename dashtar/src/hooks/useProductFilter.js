@@ -415,8 +415,8 @@ const useProductFilter = (data) => {
       console.log('validationdata', validationData)
 
       if (validationData) {
-        console.log('**************************************')
-        ProductServices.addAllProducts(selectedFile)
+        const data_ = selectedFile[0]
+        ProductServices.addAllProducts(data_)
           .then((res) => {
             console.log('result--------------')
             setIsUpdate(true);
