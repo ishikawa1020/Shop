@@ -3,10 +3,14 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const path = require("path");
+const logger = require('../config/logger');
+const { successHandler, errorHandler: morganErrorHandler } = require('../config/morgan');
 // const http = require("http");
 // const { Server } = require("socket.io");
 
 const { connectDB } = require("../config/db");
+
+const router = require('../routes')
 const productRoutes = require("../routes/productRoutes");
 const customerRoutes = require("../routes/customerRoutes");
 const adminRoutes = require("../routes/adminRoutes");
@@ -32,6 +36,9 @@ const app = express();
 // See: https://github.com/nfriedly/express-rate-limit
 // app.enable('trust proxy');
 app.set("trust proxy", 1);
+
+app.use(successHandler);
+app.use(morganErrorHandler);
 
 app.use(express.json({ limit: "400mb" }));
 app.use(helmet());
@@ -101,9 +108,7 @@ const PORT = process.env.PORT || 5000;
 
 // const server = http.createServer(app);
 
-app.listen(PORT, () => console.log(`server running on port ${PORT}`));
-
-// app.listen(PORT, () => console.log(`server running on port ${PORT}`));
+app.listen(PORT, () => logger.info(`--Server is running on port:${PORT}--`));
 
 // set up socket
 // const io = new Server(server, {

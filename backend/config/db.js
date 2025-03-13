@@ -1,4 +1,3 @@
-require("dotenv").config();
 const mongoose = require("mongoose");
 
 const connectDB = async () => {
@@ -9,7 +8,7 @@ const connectDB = async () => {
       useUnifiedTopology: true,
       useCreateIndex: true,
     });
-    console.log("mongodb connection success!");
+    console.log('--database connection successful--');
   } catch (err) {
     console.log("mongodb connection failed!", err.message);
   }

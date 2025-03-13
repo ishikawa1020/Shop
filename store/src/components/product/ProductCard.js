@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useState } from "react";
+import React, { useState, useContext } from "react";
 import { IoAdd, IoBagAddSharp, IoRemove } from "react-icons/io5";
 import { useCart } from "react-use-cart";
 import { useRouter } from "next/router";
@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 
 import Price from "@components/common/Price";
 import Stock from "@components/common/Stock";
+import { SidebarContext } from "@context/SidebarContext";
 import { notifyError } from "@utils/toast";
 import useAddToCart from "@hooks/useAddToCart";
 import useGetSetting from "@hooks/useGetSetting";
@@ -17,9 +18,9 @@ import useUtilsFunction from "@hooks/useUtilsFunction";
 import ProductModal from "@components/modal/ProductModal";
 import ImageWithFallback from "@components/common/ImageWithFallBack";
 import { handleLogEvent } from "src/lib/analytics";
-const { isLoading, setIsLoading } = useContext(SidebarContext);
-const ProductCard = ({ product, attributes }) => {
 
+const ProductCard = ({ product, attributes }) => {
+  const { isLoading, setIsLoading } = useContext(SidebarContext);
   const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
   // console.log(product) 
@@ -55,7 +56,7 @@ const ProductCard = ({ product, attributes }) => {
   const handleMoreInfo = (slug) => {
     // setModalOpen(false);
     router.push(`/product/${slug}`);
-    setIsLoading(false);
+    setIsLoading(!isLoading);
     handleLogEvent("product", `opened ${slug} product details`);
   };
 

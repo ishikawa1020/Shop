@@ -8,7 +8,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { FiShoppingCart, FiUser, FiBell } from "react-icons/fi";
 import useTranslation from "next-translate/useTranslation";
 import CategoryServices from "@services/CategoryServices";
-
+import useAsync from "@hooks/useAsync";
 
 //internal import
 import { getUserSession } from "@lib/auth";
