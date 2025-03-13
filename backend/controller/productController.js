@@ -87,7 +87,7 @@ const importandaddexcel = async (req, res) => {
 
 const addAllProducts = async (req, res) => {
   console.log("----------------------------------------------------")
-  console.log(req.body)
+  console.log(req.body.length)
   try {
     await Product.deleteMany();
     await Product.insertMany(req.body);
