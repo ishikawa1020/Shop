@@ -44,7 +44,16 @@ app.use(express.json({ limit: "400mb" }));
 app.use(helmet());
 app.use(cors({
   origin: '*'
-})); // Allows all origins
+}));
+app.use((req, res, next) => {
+  res.setTimeout(30000, () => {
+    console.log('Request has timed out.');
+    res.send(408);
+  });
+  next();
+
+});
+// Allows all origins
 
 // app.use(cors({origin: "*"}));
 
