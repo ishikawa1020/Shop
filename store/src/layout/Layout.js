@@ -12,7 +12,7 @@ import FooterTop from "@layout/footer/FooterTop";
 import MobileFooter from "@layout/footer/MobileFooter";
 import FeatureCard from "@components/feature-card/FeatureCard";
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import Customizer from 'src/components/customize'
+// import Customizer from 'src/components/customize'
 
 const Layout = ({ title, description, children }) => {
   // const { navigationSize, disableCustomizer, collapsedNavigationSize } = themeConfig
