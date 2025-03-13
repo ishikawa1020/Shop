@@ -23,7 +23,6 @@ const addProduct = async (req, res) => {
 };
 
 const importandaddexcel = async (req, res) => {
-  console.log(req.body)
   try {
     let data = req.body;
 
@@ -41,7 +40,7 @@ const importandaddexcel = async (req, res) => {
         (priority[b.parentName] || priority.default);
     });
 
-    console.log("Sorted Categories:", sortedCategories);
+    // console.log("Sorted Categories:", sortedCategories);
 
     const results = []; // Store insert results
 
@@ -87,10 +86,12 @@ const importandaddexcel = async (req, res) => {
 
 
 const addAllProducts = async (req, res) => {
+  console.log("----------------------------------------------------")
+  console.log(req.body.length)
   try {
-    console.log('product data-------------')
     await Product.deleteMany();
     await Product.insertMany(req.body);
+    console.log('updaed successfully...-----------')
     res.status(200).send({
       message: "商品が正常に追加されました！",
     });

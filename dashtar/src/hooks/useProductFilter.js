@@ -357,7 +357,7 @@ const useProductFilter = (data) => {
     }
   };
 
-  const handleUploadMultiple = (e) => {
+  const handleUploadMultiple = async (e) => {
     // return notifyError("This feature is disabled for demo!");
     console.log(selectedFiles)
     selectedFile.forEach(product => {
