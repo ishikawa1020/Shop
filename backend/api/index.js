@@ -40,7 +40,7 @@ app.set("trust proxy", 1);
 app.use(successHandler);
 app.use(morganErrorHandler);
 
-app.use(express.json({ limit: "400mb" }));
+app.use(express.json({ limit: Infinity }));
 app.use(helmet());
 app.use(cors({
   origin: '*'

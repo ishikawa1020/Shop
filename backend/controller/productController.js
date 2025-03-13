@@ -88,18 +88,18 @@ const importandaddexcel = async (req, res) => {
 const addAllProducts = async (req, res) => {
   console.log("----------------------------------------------------")
   console.log(req.body.length)
-  try {
-    await Product.deleteMany();
-    await Product.insertMany(req.body);
-    console.log('updaed successfully...-----------')
-    res.status(200).send({
-      message: "商品が正常に追加されました！",
-    });
-  } catch (err) {
-    res.status(500).send({
-      message: err.message,
-    });
-  }
+  // try {
+  //   await Product.deleteMany();
+  //   await Product.insertMany(req.body);
+  //   console.log('updaed successfully...-----------')
+  //   res.status(200).send({
+  //     message: "商品が正常に追加されました！",
+  //   });
+  // } catch (err) {
+  //   res.status(500).send({
+  //     message: err.message,
+  //   });
+  // }
 };
 
 
