@@ -17,8 +17,9 @@ import useUtilsFunction from "@hooks/useUtilsFunction";
 import ProductModal from "@components/modal/ProductModal";
 import ImageWithFallback from "@components/common/ImageWithFallBack";
 import { handleLogEvent } from "src/lib/analytics";
-
+const { isLoading, setIsLoading } = useContext(SidebarContext);
 const ProductCard = ({ product, attributes }) => {
+
   const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
   // console.log(product) 
