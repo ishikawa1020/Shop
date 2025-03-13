@@ -42,8 +42,9 @@ app.use(morganErrorHandler);
 
 app.use(express.json({ limit: "400mb" }));
 app.use(helmet());
-app.use(cors()); // Allows all origins
-app.options('*', cors());
+app.use(cors({
+  origin: '*'
+})); // Allows all origins
 
 // app.use(cors({origin: "*"}));
 
