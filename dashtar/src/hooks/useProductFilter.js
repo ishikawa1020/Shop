@@ -418,7 +418,7 @@ const useProductFilter = (data) => {
         const data_ = selectedFile[0]
         ProductServices.addAllProducts(data_)
           .then((res) => {
-            console.log('result--------------')
+            console.log(res, 'result--------------')
             setIsUpdate(true);
             setLoading(false);
             notifySuccess(res.message);
