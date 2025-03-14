@@ -46,7 +46,7 @@ app.use(cors({
   origin: '*'
 }));
 app.use((req, res, next) => {
-  res.setTimeout(30000, () => {
+  res.setTimeout(300000, () => {
     console.log('Request has timed out.');
     res.send(408);
   });
